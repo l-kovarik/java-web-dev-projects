@@ -19,6 +19,23 @@ public class BalancedBrackets {
      * @param str - to be validated
      * @return true if balanced, false otherwise
      */
+
+    /* Student Pseudo-code:
+These strings have balanced brackets:
+     *  "[LaunchCode]", "Launch[Code]", "[]LaunchCode", "", "[]"
+     *
+     * ArrayList<String> testArr = new ArrayList();
+     * testArr.add("[LaunchCode]"); - Pass
+     * indexOf("[") > indexOf("])" - (0, -1)
+                        -----
+     * testArr.add("Launch[Code]"); - Pass
+     * testArr.add("[]LaunchCode"); - Pass
+     * testArr.add(""); - Pass
+     * testArr.add("[]"); - Pass
+     * While these do not:
+     *   "[LaunchCode", "Launch]Code[", "[", "]["
+
+ */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
         for (char ch : str.toCharArray()) {
@@ -30,4 +47,8 @@ public class BalancedBrackets {
         }
         return brackets == 0;
     }
+
+//    public static hasBalancedBrackets("Launch[]code");
+//    hasBalancedBrackets("[");
+
 }
