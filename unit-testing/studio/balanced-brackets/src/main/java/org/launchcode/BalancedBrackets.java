@@ -1,4 +1,7 @@
 package org.launchcode;
+
+
+
 public class BalancedBrackets {
     /*
      * The function BalancedBrackets should return true if and only if
@@ -20,22 +23,6 @@ public class BalancedBrackets {
      * @return true if balanced, false otherwise
      */
 
-    /* Student Pseudo-code:
-These strings have balanced brackets:
-     *  "[LaunchCode]", "Launch[Code]", "[]LaunchCode", "", "[]"
-     *
-     * ArrayList<String> testArr = new ArrayList();
-     * testArr.add("[LaunchCode]"); - Pass
-     * indexOf("[") > indexOf("])" - (0, -1)
-                        -----
-     * testArr.add("Launch[Code]"); - Pass
-     * testArr.add("[]LaunchCode"); - Pass
-     * testArr.add(""); - Pass
-     * testArr.add("[]"); - Pass
-     * While these do not:
-     *   "[LaunchCode", "Launch]Code[", "[", "]["
-
- */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
         for (char ch : str.toCharArray()) {
@@ -44,11 +31,21 @@ These strings have balanced brackets:
             } else if (ch == ']') {
                 brackets--;
             }
+            if (brackets < 0) {
+                return false;
+            }
         }
         return brackets == 0;
     }
 
-//    public static hasBalancedBrackets("Launch[]code");
-//    hasBalancedBrackets("[");
+    public static void main(String[] args) {
+
+        System.out.println(hasBalancedBrackets("Launch[]code"));
+        System.out.println(hasBalancedBrackets("]["));
+
+    }
+
 
 }
+
+
