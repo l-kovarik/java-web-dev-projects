@@ -20,3 +20,7 @@ public class HouseCat extends Cat {
         return "I'm a HouseCat";
     }
 }
+
+    public static void main(String[] args) {
+
+    }
