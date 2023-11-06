@@ -20,6 +20,6 @@ public class File {
 
     @Override
     public String toString() {
-        return name + " - " + size + "MB";
+        return name + " - " + size + " MB";
     }
 }

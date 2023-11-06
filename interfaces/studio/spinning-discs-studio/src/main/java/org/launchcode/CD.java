@@ -41,7 +41,7 @@ public class CD extends Media implements Rewritable{
             System.out.println("Warning: There is not enough space on the " + getDiscType() + " for " + file.getName() + ".");
         } else {
             getFiles().add(file);
-            System.out.println("The " + fileType + " " + file.getName() + "has been added to " + getName() + ".");
+            System.out.println("The " + fileType + " " + file.getName() + " has been added to " + getName() + ".");
         }
     }
 

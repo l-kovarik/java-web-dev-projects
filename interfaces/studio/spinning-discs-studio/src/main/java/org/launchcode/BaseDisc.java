@@ -61,7 +61,7 @@ public abstract class BaseDisc {
 
     void spinDisc() {
         String newline = System.lineSeparator();
-        System.out.println(newline + "The" + discType + " " + name +
+        System.out.println(newline + "The " + discType + " " + name +
                 " is spinning at " + spinRate + " RPM." + newline);
     }
 }

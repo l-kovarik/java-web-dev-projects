@@ -27,16 +27,16 @@ public abstract class Media extends BaseDisc {
     @Override
     public String toString() {
         String newline = System.lineSeparator();
-        return super.toString() + "Capacity " + capacity + " MB" + newline +
-                "Space used " + getSpaceUsed() + " MB" + newline +
-                "Available space " + getSpaceAvailable() + " MB" + newline;
+        return super.toString() + "Capacity: " + capacity + " MB" + newline +
+                "Space used: " + getSpaceUsed() + " MB" + newline +
+                "Available space: " + getSpaceAvailable() + " MB" + newline;
     }
 
     public String getFormattedFileList(String header) {
         StringBuilder fileList = new StringBuilder();
         String newline = System.lineSeparator();
         if (files.size() > 0) {
-            fileList.append(newline).append(header).append(";");
+            fileList.append(newline).append(header).append(":");
             for (File file : files) {
                 fileList.append(newline).append("\t").append(file);
             }
@@ -48,7 +48,7 @@ public abstract class Media extends BaseDisc {
         if (getFiles().contains(file)) {
             return true;
         } else {
-            System.out.println("That file does not exist on this" + getDiscType() + ".");
+            System.out.println("That file does not exist on this " + getDiscType() + ".");
             return false;
         }
     }
